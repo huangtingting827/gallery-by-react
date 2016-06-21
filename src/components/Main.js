@@ -10,7 +10,7 @@ var imagesDatas = require('../data/imagesDatas.json');
 
 //let yeomanImage = require('../images/yeoman.png');
 //利用自执行函数，将图片信息转成图片URL路径信息
-imageDatas=(function genImageURL(imageDatasArr){
+imagesDatas=(function genImageURL(imageDatasArr){
 	for (var i=0,j=imageDatasArr.length;i<j;i++){
 		var singleImageData = imageDatasArr[i];
 
@@ -20,19 +20,24 @@ imageDatas=(function genImageURL(imageDatasArr){
 	}
 
 	return imageDatasArr;
-})(imageDatas);
+})(imagesDatas);
 
 
 
 class AppComponent extends React.Component {
   render() {
     return (
+
       <section className="stage">
-        <section className="img-sec">
-      	</section>
-      	<nav className="controller-nav">
-      	</nav>
+		<section className="img-sec">
+
+		</section>
+		<nav className="controller-nav">
+
+		</nav>
       </section>
+
+
     );
   }
 }
