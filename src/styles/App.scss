@@ -1,30 +1,10 @@
-/* Base Application Styles */
-body {
-  color: #fff;
-  background: #222;
-}
-
-.index img {
-  margin: 40px auto;
-  border-radius: 4px;
-  background: #fff;
-  display: block;
-}
-
-.index .notice {
-  margin: 20px auto;
-  padding: 15px 0;
-  text-align: center;
-  border: 1px solid #000;
-  border-width: 1px 0;
-  background: #666;
-}
-
 html,body{
   height: 100%;
   width: 100%;
   background-color: #222;
 }
+
+
 
 .content{
   height: 100%;
@@ -46,6 +26,54 @@ html,body{
   width: 100%;
   overflow: hidden;
   background-color: #ddd;
+  perspective: 1800px;
+
+  @at-root{
+    .img-figure{
+      position:absolute;
+      width:320px;
+      height:360px;
+      margin:0;
+      padding:40px;
+      background-color: #fff;
+
+      box-sizing:border-box;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease-in-out, left 0.6s ease-in-out, top 0.6s ease-in-out;
+      transform-origin: 0 50% 0;
+      
+      &.is-inverse{
+        transform:translate(320px) rotateY(180deg);
+      }
+    }
+    figcaption{
+      text-align: center;
+
+      .img-title{
+        margin:20px 0 0 0;
+        color:#a7a0a2;
+        font-size:16px;
+      }
+      .img-back{
+        position: absolute;
+        left: 0;
+        top:0;
+
+        width:100%;
+        height:100%;
+        padding:50px 40px;
+        overflow:auto;
+        color:#a7a0a2;
+        font-size: 22px;
+        text-align: left;
+        background-color: #fff;
+        box-sizing: border-box;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+      }
+    }
+  }
 }
 /*image --end*/
 
